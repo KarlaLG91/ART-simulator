@@ -1,0 +1,14 @@
+#!/bin/bash
+##
+## DESCRIPTION:
+##	Script to print required mk targets to STDOUT
+## USAGE:
+##	bin/create-targets
+
+# Generate targets for FASTA files to generate simulated reads using ART.
+find -L data/ \
+	-type f \
+	-name "*.fasta" \
+| sed \
+	-e "s#data/#results/#" \
+	-e "s#.fasta#.paired_end#" \
