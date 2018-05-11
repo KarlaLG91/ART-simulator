@@ -1,5 +1,12 @@
 ## Here we declare the variables that are going to be used by mkfile.
 
+#Define the type of sequencing reads. (accepted types are paired_end, single_end and mate_pair)
+##Comment or uncomment lines to change type of sequencing reads being generated.
+
+READ_TYPE="paired_end"
+#READ_TYPE="single_end"
+#READ_TYPE="mate_pair"
+
 # Define the sequencing system. (accepted types are  GA1, GA2, HS10, HS20, HS25, HSXn, HSXt, MinS, MSv1, MSv3, NS50)
 # GA1 - GenomeAnalyzer I (36bp,44bp), GA2 - GenomeAnalyzer II (50bp, 75bp), HS10 - HiSeq 1000 (100bp), HS20 - HiSeq 2000 (100bp),
 # HS25 - HiSeq 2500 (125bp, 150bp), HSXn - HiSeqX PCR free (150bp), HSXt - HiSeqX TruSeq (150bp),MinS - MiniSeq TruSeq (50bp),
