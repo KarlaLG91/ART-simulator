@@ -29,11 +29,11 @@ results/%:: data/%.fasta
 	art_illumina -ss $SEQ_SYSTEM -sam -i $prereq -mp \
 	-l $READ_LENGTH -f $COV -m $SIZE -s $STD -o $target"_$READ_TYPE".build
 	fi \
-	&& mv $target"_$READ_TYPE".build1.aln $target"_$READ_TYPE"1.aln \
-	mv $target"_$READ_TYPE".build1.fq $target"_$READ_TYPE"1.fq \
-	mv $target"_$READ_TYPE".build2.aln $target"_$READ_TYPE"2.aln \
-	mv $target"_$READ_TYPE".build2.fq $target"_$READ_TYPE"2.fq \
-	mv $target"_$READ_TYPE".build.sam $target"_$READ_TYPE".sam
+	&& for file in results/*
+	do
+	NEWNAME=`echo $file | sed "s#.build##"`
+	mv -- "$file" "$NEWNAME"
+	done
 
 ### Add a "clean" recipe to quickly remove results directory
 clean:V:
