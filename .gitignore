@@ -1,0 +1,4 @@
+## Here can be added paths that will not be versioned by git.
+
+# for results/ as a directory
+*results/*
