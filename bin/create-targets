@@ -11,4 +11,4 @@ find -L data/ \
 	-name "*.fasta" \
 | sed \
 	-e "s#data/#results/#" \
-	-e "s#.fasta#.paired_end#" \
+	-e "s#.fasta##" \
