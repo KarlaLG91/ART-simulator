@@ -31,7 +31,7 @@ READ_LENGTH="150"
 COV="30"
 
 # Define the mean size of the DNA fragment for paired-end simulation.
-SIZE="200"
+SIZE="300"
 
 # Define the standard deviation of SNA fragment size for paired-end simulation.
-STD="10"
+STD="100"
